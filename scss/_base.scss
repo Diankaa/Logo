@@ -7,11 +7,26 @@
 body {
   width: 100%;
   height: 100%;
-  font-family: "Gotham Pro", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 15px;
   color: #fff;
   background-color: #0d131c;
+}
+
+.container {
+  max-width: 1442px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+button {
+  font-family: "Gotham Pro", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  background: transparent;
+  color: #fff;
+  border: none;
 }
 
 a {
@@ -23,44 +38,72 @@ a {
   cursor: pointer;
 }
 
-button {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  outline: none;
-}
-
-ul {
+li {
   list-style: none;
 }
 
-img {
-  display: inline-block;
+.section-bg {
+  max-width: 100%;
+  margin-bottom: -1%;
 }
 
-.container {
-  max-width: 1440px;
-  width: 100%;
-  margin: 0 auto;
+.block {
+  background-color: #161f2c !important;
+  padding: 30px 20px 19px 30px;
+  border-radius: 20px;
 }
 
-.main-content__section {
-  padding-bottom: 80px;
+.text-gray {
+  color: #55657e;
+}
+
+.text-orange {
+  color: #f8a138;
+}
+
+.text-upper {
+  text-transform: uppercase;
+}
+
+.main-title {
+  font-family: "Gotham Pro", sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  font-family: "Gotham Pro", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  text-transform: uppercase;
 }
 
 .info-icon {
   width: 15px;
   height: 15px;
+  vertical-align: middle;
 }
 
-.btn-arrow {
-  width: 14px;
-  height: 10px;
+.section-table {
+  position: relative;
+  border-collapse: collapse;
+  width: 100%;
+  text-align: left;
+  td {
+    vertical-align: top;
+  }
+  th + th,
+  td + td {
+    padding-left: 10px;
+  }
 }
 
-.btn-arrow.active {
-  transform: rotate(180deg);
-  top: 30%;
+.table-titles th {
+  font-family: "Gotham Pro";
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: #55657e;
 }
 
 .flex-center {
@@ -68,216 +111,36 @@ img {
   align-items: center;
 }
 
-.flex-between {
-  display: flex;
-  justify-content: space-between;
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+  border-radius: 18px;
 }
 
-.d-flex {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+/* Track */
+::-webkit-scrollbar-track {
+  background: #21293a;
+  border-radius: 18px;
 }
 
-.main-select {
-  display: none;
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #55657e;
+  border-radius: 18px;
 }
 
-.customer-select {
-  position: relative;
+.dashboard__table-item,
+.profit-statistic,
+.topmenu-links {
+  overflow-x: scroll;
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none;
 }
 
-.select-buttons {
-  position: relative;
-}
-
-.select-btn {
-  position: absolute;
-  z-index: 20;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-}
-
-.customer-btn {
-  display: flex;
-  align-items: center;
-}
-
-.text-gray {
-  color: #55657e;
-}
-
-.text-upper {
-  text-transform: uppercase;
-}
-
-.select-dropdown {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  padding-top: 15px;
-  transition: all 0.3s;
-}
-
-.select-list {
-  background: #24292f;
-  border-radius: 5px;
-  padding: 10px 0;
-}
-
-.select-list,
-.user-dropdown__inner {
-  position: relative;
-  z-index: 10;
-  &::after {
-    content: "";
-    position: absolute;
-    top: -20px;
-    left: 50%;
-    transform: translateX(-50%);
-    border: solid transparent;
-    pointer-events: none;
-    border-color: rgba(36, 41, 47, 0);
-    border-bottom-color: #24292f;
-    border-width: 10px;
-    z-index: 5;
-  }
-}
-
-.select-list__item {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  white-space: nowrap;
-  cursor: pointer;
-}
-
-.select-currency {
-  margin-left: 5px;
-}
-
-.section-select {
-  position: relative;
-  border: 1px solid #55657e;
-  border-radius: 10px;
-}
-
-.section-select__btn {
-  width: 100%;
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-size: 15px;
-  line-height: 18px;
-  color: #fff;
-  padding: 10px 55px 10px 15px;
-}
-
-.section-select img[data-cur] {
-  width: 17px;
-  height: 21px;
-  margin-right: 10px;
-}
-
-.section-select__btn {
-  & .text-gray,
-  & .text-upper {
-    font-family: "Gotham Pro", sans-serif;
-  }
-}
-
-.section-select__dropdown {
-  width: 100%;
-}
-
-.section-select__list {
-  padding: 0;
-}
-
-.section-select__list .select-list__item {
-  width: 100%;
-  height: 43px;
-  padding: 0 15px;
-}
-
-.section-select__list .select-list__item:hover {
-  background-color: rgba(85, 101, 126, 0.25);
-}
-
-.main-title {
-  font-weight: 700;
-  font-size: 30px;
-  text-transform: uppercase;
-  color: #fff;
-}
-
-.subtitle {
-  font-family: "Gotham Pro", sans-serif;
-  font-weight: 500;
-  font-size: 20px;
-  text-transform: uppercase;
-  color: #fff;
-}
-
-.block {
-  width: 49%;
-  background: linear-gradient(
-    216.94deg,
-    rgba(22, 31, 44, 0) 3.48%,
-    rgba(22, 31, 44, 0.87) 69.99%
-  );
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: right bottom;
-  border-radius: 20px;
-}
-
-.block__inner {
-  padding: 30px;
-}
-
-.crypt-num {
-  display: flex;
-  align-items: center;
-  height: 40px;
-  &__img {
-    margin-right: 15px;
-    & img {
-      width: 24px;
-      height: 24px;
-    }
-  }
-  &__sum {
-    font-family: "Roboto";
-    font-weight: 700;
-    font-size: 15px;
-    color: #fff;
-    &--gray {
-      color: #55657e;
-    }
-  }
-}
-
-.select-arrow {
-  position: absolute;
-  width: 29px;
-  height: 100%;
-  right: 0;
-  top: 0;
-  background: rgba(85, 101, 126, 0.25);
-  border-radius: 0px 10px 10px 0px;
-  border-color: transparent;
-  border-left: 1px solid #55657e;
-  cursor: pointer;
-  &::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    top: 46%;
-    border: 6px solid transparent;
-    border-top: 7px solid #fff;
-    transform: translate(-50%);
-  }
+.dashboard__table-item::-webkit-scrollbar,
+.profit-statistic::-webkit-scrollbar,
+.topmenu-links::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+  width: 0px; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
 }

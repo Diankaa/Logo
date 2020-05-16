@@ -1,148 +1,3 @@
-// let langArray = [];
-// function initDelect() {}
-// $(".main-select").each(function() {
-//   $(this).find('option').each(function () {
-//     const img = $(this).attr("data-img");
-//     console.log($(this));
-
-//     const currency = $(this).attr("data-currency");
-//     const text = $(this).text();
-//     let colorText = "";
-//     if ($(this).attr("data-color")) {
-//       colorText = $(this).attr("data-color");
-//     }
-
-//     const className = "select-list__item";
-//     const item = {
-//       select:
-//         '<li class="' +
-//         className +
-//         '"><img src="' +
-//         img +
-//         '" alt="#" data-cur="' +
-//         currency +
-//         '"/><span class="select-text">' +
-//         text +
-//         '</span><span class="select-text--light">' +
-//         colorText +
-//         '</span><span class="select-currency">' +
-//         currency +
-//         "</span>",
-//       list:
-//         '<img src="' +
-//         img +
-//         '" alt="#" data-cur="' +
-//         currency +
-//         '"/><span class="select-text">' +
-//         text +
-//         '</span><span class="select-text--light">' +
-//         colorText +
-//         "</span>",
-//     };
-//     langArray.push(item);
-//   });
-// });
-
-// const selectList = [];
-// const currentItem = [];
-// langArray.forEach((item) => {
-//   selectList.push(item.select);
-//   currentItem.push(item.list);
-// });
-
-// selectList.shift();
-// $("#select-list").html(selectList);
-
-// $(".customer-btn").append(currentItem[0]);
-
-// function initDropdown(item) {
-//   item.find(".select-dropdown").toggle();
-//   $(window).click(function (e) {
-//     if (
-//       !$(e.target).hasClass("select-btn") &&
-//       !$(e.target).hasClass("select-dropdown")
-//     ) {
-//       item.find(".select-dropdown").hide();
-//     }
-//   });
-// }
-
-// function changeSelect() {
-//   $("#select-list li").click(function () {
-//     console.log($(".customer-btn").get(0));
-
-//     const selectImg = $(this).find("img").attr("src");
-//     const selectText = $(this).find(".select-text").text();
-//     const selectcurrency = $(this).find("img").attr("data-cur");
-//     const currentImg = $(".customer-btn").find("img").attr("src");
-//     const currentText = $(".customer-btn").find(".select-text").text();
-//     const currentCurrency = $(".customer-btn").find("img").attr("data-cur");
-//     const currentTextLight = $(".customer-btn")
-//       .find(".select-text--light")
-//       .text();
-//     const selectTextLight = $(this).find(".select-text--light").text();
-//     const currentSelectContent =
-//       '<img src="' +
-//       selectImg +
-//       '" alt="#" data-cur="' +
-//       selectcurrency +
-//       '" /><span class="select-text">' +
-//       selectText +
-//       '</span><span class="select-text--light">' +
-//       selectTextLight +
-//       "</span>";
-//     $(".customer-btn").html(currentSelectContent);
-//     const selectContent =
-//       '<img src="' +
-//       currentImg +
-//       '" alt="#" data-cur="' +
-//       currentCurrency +
-//       '"/><span class="select-text">' +
-//       currentText +
-//       '</span><span class="select-text--light">' +
-//       currentTextLight +
-//       '</span><span class="select-currency">' +
-//       currentCurrency +
-//       "</span>";
-//     $(this).html(selectContent);
-//   });
-// }
-
-// changeSelect();
-
-// function initArrow(item) {
-//   item.find(".btn-arrow").addClass("active");
-// }
-
-// function hideArrow(item) {
-//   item.find(".btn-arrow").removeClass("active");
-// }
-
-// $(".customer-select").each(function () {
-//   const select = $(this);
-//   if ($(window).width() > 768) {
-//     if (select.attr("data-event") == "hover") {
-//       select
-//         .hover(function () {
-//           select.find(".select-dropdown").show();
-//           initArrow(select);
-//         })
-//         .mouseleave(function () {
-//           select.find(".select-dropdown").hide();
-//           hideArrow(select);
-//         });
-//     } else {
-//       select.find(".select-btn").click(function (e) {
-//         initDropdown(select);
-//       });
-//     }
-//   } else {
-//     select.find(".select-btn").click(function (e) {
-//       initDropdown(select);
-//     });
-//   }
-// });
-
 function changeStakingProfit(item) {
   const btcValues = {
     day: {
@@ -165,7 +20,6 @@ function changeStakingProfit(item) {
     },
   };
 
-  
   const trxValues = {
     day: {
       btt: "19908.51xxx",
@@ -188,33 +42,41 @@ function changeStakingProfit(item) {
   };
 
   let profitValues = "";
-  const currencyName = item.attr("data-profit-btn") || item.attr("data-staking-profit");
-  
-  if(currencyName == "trx") {
+  const cryptName =
+    item.attr("data-profit-btn") || item.attr("data-staking-profit");
+
+  if (cryptName == "trx") {
     profitValues = trxValues;
   } else {
     profitValues = btcValues;
   }
-  const currencyDate =
+  const cryptDate =
     item.find(".select-text").attr("data-date") ||
-    item.find("option").attr("data-currency-date");
+    item.find("option").attr("data-crypt-date");
 
-  const profitBtt = $("[data-" + currencyName + "-btt]").find(".crypt-num__sum");
-  const profitUsdt = $("[data-" + currencyName + "-usdt]").find(".crypt-num__sum");
-  const profitTrx = $("[data-" + currencyName + "-ytx]").find(".crypt-num__sum");
-  const profitBtc = $("[data-" + currencyName + "-btc]").find(".crypt-num__sum");
-console.log(profitValues);
+  const profitBtt = $("[data-" + cryptName + "-btt]").find(
+    ".crypt-num__sum"
+  );
+  const profitUsdt = $("[data-" + cryptName + "-usdt]").find(
+    ".crypt-num__sum"
+  );
+  const profitTrx = $("[data-" + cryptName + "-ytx]").find(
+    ".crypt-num__sum"
+  );
+  const profitBtc = $("[data-" + cryptName + "-btc]").find(
+    ".crypt-num__sum"
+  );
 
-  const dataDate = profitValues[currencyDate];  
-  
-  $.each(dataDate, function (currency, value) {
+  const dataDate = profitValues[cryptDate];
+
+  $.each(dataDate, function (crypt, value) {
     const xPosition = value.search("x");
     const valueNum = value.substring(0, xPosition);
     const xLength = value.slice(xPosition).length;
 
-    dataDate[currency] =
+    dataDate[crypt] =
       valueNum +
-      '<span class="crypt-num__sum--gray">' +
+      "<span class='crypt-num__sum--gray'>" +
       "0".repeat(xLength) +
       "</span>";
     return value;
@@ -226,96 +88,71 @@ console.log(profitValues);
   profitBtt.html(dataDate.btt);
 }
 
-function changeProfitValue(targetItem) {  
-  const curAprValue = targetItem.find("img").attr("data-profit-cur") ||
-  targetItem.find("option").attr("data-profit-currency");
-  
+function changeProfitValue(targetItem) {
+  const curAprValue =
+    targetItem.find("img").attr("data-profit-cur") ||
+    targetItem.find("option").attr("data-profit-crypt");
+
   const profitAprValue = $(".apr-value");
   const profitRoiValue = $(".roi-value");
 
   switch (curAprValue) {
-    case "(trx)":      
-      profitAprValue.each(function() {                      
-        $(this).html("650 %");
+    case "(trx)":
+      profitAprValue.each(function () {
+        $(this).html("230 <span class='profit-value__per'> % </span>");
       });
-      profitRoiValue.each(function() {
-        $(this).html("230 Days");
+      profitRoiValue.each(function () {
+        $(this).html("330 <span class='profit-value__per'> Days </span>");
       });
       break;
     default:
-      profitAprValue.each(function() {
-        $(this).html("230 %");
+      profitAprValue.each(function () {
+        $(this).html("650 <span class='profit-value__per'> % </span>");
       });
-      profitRoiValue.each(function() {
-        $(this).html("30 Days");
+      profitRoiValue.each(function () {
+        $(this).html("230 <span class='profit-value__per'> Days </span>");
       });
   }
 }
 
 function initSelect(item) {
-  const select = item.siblings(".customer-select");
+  const select = item.siblings(".select");
   let langArray = [];
 
   item.find("option").each(function () {
     const getImg = $(this).attr("data-img") || "";
     const text = $(this).text();
-    const getCurrency = $(this).attr("data-currency") || "";
+    const getCrypt = $(this).attr("data-crypt") || "";
     const getColorText = $(this).attr("data-color");
-    const getProfitCurrency = $(this).attr("data-profit-currency") || "";
-    const profitCurrencyX = $(this).attr("data-profit-x");
-    const getCurrencyDate = $(this).attr("data-currency-date");
+    const getProfitCrypt = $(this).attr("data-profit-crypt") || "";
+    const profitCryptX = $(this).attr("data-profit-x") || "";
+    const getCryptDate = $(this).attr("data-crypt-date");
     const className = "select-list__item";
-
     const img = getImg
-      ? '<img src="' +
-        getImg +
-        '" alt="#" data-cur="' +
-        getCurrency +
-        '" data-profit-cur="' +
-        getProfitCurrency +
-        '"/>'
+      ? `<img src="${getImg}" alt="#" data-crypt="${getCrypt}"
+    data-profit-crypt="${getProfitCrypt}"/>`
       : "";
-    const currency = getCurrency
-      ? "<span class='select-currency'>" + getCurrency + "</span>"
+    const crypt = getCrypt
+      ? `<span class="select-crypt"> ${getCrypt} </span>`
       : "";
-    const profitCurrency = getProfitCurrency
-      ? "<span class='text-upper'>" +
-        profitCurrencyX +
-        "</span><span class='text-upper text-gray'>" +
-        getProfitCurrency +
-        "</span>"
+    // const profitCrypt = getProfitCrypt
+    //   ? `<span class="select-crypt text-upper">${profitCryptX}<span class="text-gray">${getProfitCrypt}</span></span>`
+    //   : "";
+    const profitCrypt = getProfitCrypt
+      ? `<span class="text-x text-upper">${profitCryptX}<span class="text-upper text-gray">${getProfitCrypt}</span></span>`
       : "";
     const colorText = getColorText
-      ? '</span><span class="text-gray">' + getColorText + "</span>"
+      ? `</span><span class="text-gray"> ${getColorText} </span>`
       : "";
-
-    const currencyDate = getCurrencyDate
-      ? 'data-date="' + getCurrencyDate + '"'
-      : "";
+    const cryptDate = getCryptDate ? `data-date="${getCryptDate}"` : "";
 
     const item = {
-      select:
-        '<li class="' +
-        className +
-        '">' +
-        img +
-        '<span class="select-text"' +
-        currencyDate +
-        ">" +
-        text +
-        profitCurrency +
-        "</span>" +
-        colorText +
-        currency,
-      list:
-        img +
-        '<span class="select-text"' +
-        currencyDate +
-        ">" +
-        text +
-        profitCurrency +
-        "</span>" +
-        colorText,
+      select: `<li class="${className}"> ${img} 
+        <span class="select-text"
+        ${cryptDate} > ${text} ${profitCrypt} </span>
+        ${colorText}  ${crypt} </li>`,
+      list: `${img} <span class="select-text"
+      ${cryptDate} > ${text} ${profitCrypt} </span>  ${colorText}`,
     };
     langArray.push(item);
   });
@@ -323,7 +160,7 @@ function initSelect(item) {
   const selectList = [];
   const currentItem = [];
 
-  langArray.forEach((item) => {
+  langArray.forEach(function (item) {
     selectList.push(item.select);
     currentItem.push(item.list);
   });
@@ -331,15 +168,14 @@ function initSelect(item) {
   selectList.shift();
 
   select.find(".select-list").html(selectList);
-
-  select.find(".customer-btn").append(currentItem[0]);
+  select.find(".select-button").html(currentItem[0]);
 }
 
 $(".main-select").each(function () {
   initSelect($(this));
   changeSelect($(this));
-  
-  if ($(this).is("[data-profit]")) {    
+
+  if ($(this).is("[data-profit]")) {
     changeProfitValue($(this));
   }
 
@@ -350,50 +186,54 @@ $(".main-select").each(function () {
 
 function initDropdown(item) {
   item.find(".select-dropdown").toggle();
-  $(window).click(function (e) {
+
+  $(window).click(function (e) {    
     if (
       !$(e.target).hasClass("select-btn") &&
       !$(e.target).hasClass("select-dropdown")
-    ) {
+    ) {      
       item.find(".select-dropdown").hide();
+
+      hideArrow(item);
     }
   });
 }
 
 function changeSelect(item) {
-  const customerSelect = item.siblings(".customer-select");
-  const customerBtn = customerSelect.find(".customer-btn");
+  const customerSelect = item.siblings(".select");
+  const customerBtn = customerSelect.find(".select-button");
+  console.log(customerBtn);
+  
   customerSelect.find(".select-list li").click(function () {
-    let getCurrentCurrency = customerBtn.find("img").attr("data-cur") || "";
-    const currentSelectContent = $(this).clone();
-    currentSelectContent.find(".select-currency").remove();
+    let getCurrentcrypt = customerBtn.find("img").attr("data-crypt") || "";
+    const currentSelectContent = $(this).clone();    
+    currentSelectContent.find(".select-crypt").remove();
+    
     const selectContent =
       customerBtn.get(0).innerHTML +
-      '<span class="select-currency">' +
-      getCurrentCurrency +
-      "</span>";
+      `<span class="select-crypt"> ${getCurrentcrypt} </span>`;
     $(this).html(selectContent);
     customerBtn.html(currentSelectContent.get(0).innerHTML);
- 
+
     if (item.is("[data-profit]")) {
       changeProfitValue(customerBtn);
     }
-     
-    if (item.is("[data-staking-profit]")) {      
+
+    if (item.is("[data-staking-profit]")) {
       changeStakingProfit(customerBtn);
     }
   });
 }
 
 function initArrow(item) {
-  item.find(".btn-arrow").addClass("active");
+  item.find(".select-arrow").toggleClass("active");
 }
 
 function hideArrow(item) {
-  item.find(".btn-arrow").removeClass("active");
+  item.find(".select-arrow").removeClass("active");
 }
 
-$(".customer-select").each(function () {
+$(".select").each(function () {
   const select = $(this);
   if ($(window).width() > 768) {
     if (select.attr("data-event") == "hover") {
@@ -407,13 +247,60 @@ $(".customer-select").each(function () {
           hideArrow(select);
         });
     } else {
-      select.find(".select-btn").click(function () {
+      select.find(".select-btn").click(function (e) {        
+        e.preventDefault();
+
+        initArrow(select);
         initDropdown(select);
       });
     }
   } else {
-    select.find(".select-btn").click(function () {
+    select.find(".select-btn").click(function (e) {
+      e.preventDefault();
+      initArrow(select);
       initDropdown(select);
     });
   }
 });
+
+$(".dashboard__table-body tr").each(function () {
+  const tableItem = $(this);
+  $(this)
+    .find(".select-btn")
+    .click(function (e) {
+      initArrow(tableItem);
+      tableItem.find(".crypt-list").each(function () {
+        $(this).toggleClass("active");
+      });
+    });
+});
+
+// $("#menu-toggle").click(function () {
+//   if ($(window).width() < 1118 && $(window).width() > 476) {
+//     $(".header__topmenu").toggleClass("tablet");
+//   } else {
+//     $(".header__topmenu").toggleClass("tablet");
+//   }
+// });
+
+$("#menu-toggle").click(function () {
+    $(".header__topmenu").toggleClass("mobile");
+});
+
+if ($(window).width() < 996) {
+  $(".dividents-btn--gray").text("About divis");
+}
+
+const tableValues = $(".profit-values");
+const moveBtn = $(".profit-values__move");
+
+if (tableValues.width() < parseInt($(".profit-table").css("min-width"))) {
+  moveBtn.removeClass("hidden");
+  tableValues.scroll(function () {
+    tableValues.scrollLeft() > 0
+      ? moveBtn.addClass("hidden")
+      : moveBtn.removeClass("hidden");
+  });
+} else {
+  moveBtn.addClass("hidden");
+}
