@@ -288,19 +288,36 @@ $("#menu-toggle").click(function () {
 });
 
 if ($(window).width() < 996) {
-  $(".dividents-btn--gray").text("About divis");
+  $(".main__content-btn--blue").text("About divis");
 }
 
-const tableValues = $(".profit-values");
-const moveBtn = $(".profit-values__move");
 
-if (tableValues.width() < parseInt($(".profit-table").css("min-width"))) {
-  moveBtn.removeClass("hidden");
-  tableValues.scroll(function () {
-    tableValues.scrollLeft() > 0
-      ? moveBtn.addClass("hidden")
-      : moveBtn.removeClass("hidden");
-  });
-} else {
-  moveBtn.addClass("hidden");
-}
+$(".table-scroll").each((function() {
+  const moveBtn = $(this).find(".table-move");
+
+  if($(this).width() < parseInt($(this).find(".section-table").css("min-width"))) {
+    moveBtn.removeClass("hidden");
+    $(this).addClass("scroll-hide");
+    $(this).scroll(function () {
+      $(this).scrollTop() > 0 || $(this).scrollLeft() > 0
+        ? moveBtn.addClass("hidden")
+        : moveBtn.removeClass("hidden");
+    });
+  } else {
+    moveBtn.addClass("hidden");
+    $(this).find(".dashboard__table-body").css("overflow", "auto");
+  }
+}));
+
+// const tableValues = $(".profit-statistic");
+
+// if (tableValues.width() < parseInt($(".profit-table").css("min-width"))) {
+//   moveBtn.removeClass("hidden");
+//   tableValues.scroll(function () {
+//     tableValues.scrollLeft() > 0
+//       ? moveBtn.addClass("hidden")
+//       : moveBtn.removeClass("hidden");
+//   });
+// } else {
+//   moveBtn.addClass("hidden");
+// }

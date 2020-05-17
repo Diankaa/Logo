@@ -44,7 +44,8 @@ li {
 
 .section-bg {
   max-width: 100%;
-  margin-bottom: -1%;
+  margin-left: 3px;
+  margin-bottom: -8px;
 }
 
 .block {
@@ -100,7 +101,7 @@ li {
 }
 
 .table-titles th {
-  font-family: "Gotham Pro";
+  font-family: "Gotham Pro", sans-serif;
   font-weight: 500;
   letter-spacing: 0.01em;
   color: #55657e;
@@ -111,9 +112,44 @@ li {
   align-items: center;
 }
 
+.table-move {
+  position: sticky;
+  width: 40px;
+  top: 93%;
+  left: 76%;
+  z-index: 50;
+  display: block;
+  &.hidden {
+    display: none;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    background: url("../img/move.png") no-repeat center;
+    width: 22px;
+    height: 22px;
+    transform: translateY(-100%);
+    background-color: #fa305c;
+    border-radius: 50%;
+    padding: 10px;
+    z-index: 10;
+  }
+}
+
+.table-move__shadow {
+  position: relative;
+  width: 0px;
+  bottom: 0;
+  top: -126px;
+  right: -68px;
+  box-shadow: 0 0 170px 100px #161f2c;
+  z-index: 4;
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 7px;
+  height: 6px;
   border-radius: 18px;
 }
 
@@ -129,17 +165,13 @@ li {
   border-radius: 18px;
 }
 
-.dashboard__table-item,
-.profit-statistic,
-.topmenu-links {
+.scroll-hide {
   overflow-x: scroll;
   -ms-overflow-style: none; /* Internet Explorer 10+ */
   scrollbar-width: none;
 }
 
-.dashboard__table-item::-webkit-scrollbar,
-.profit-statistic::-webkit-scrollbar,
-.topmenu-links::-webkit-scrollbar {
+.scroll-hide::-webkit-scrollbar {
   display: none; /* Safari and Chrome */
   width: 0px; /* Remove scrollbar space */
   background: transparent; /* Optional: just make scrollbar invisible */

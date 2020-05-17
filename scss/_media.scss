@@ -1,5 +1,17 @@
-@media (max-width: 1250px) {
-  .aside {
+@media (max-height: 1118px) {
+  .aside-menu__nav {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-height: 940px) {
+  .lang {
+    display: none;
+  }
+}
+
+@media (max-width: 1300px) {
+  .aside-menu {
     display: none;
   }
 
@@ -68,13 +80,158 @@
   }
 }
 
-@media (max-width: 767px) {
-  .main-content__wrapper {
-    max-width: 365px;
-    padding-left: 20px;
-    padding-right: 20px;
+@media only screen and (max-width: 1150px) and (min-device-width: 767px) {
+  // .paid__head-content {
+  //   flex-wrap: wrap;
+  // }
+
+  // .paid__head-trx {
+  //   width: 100%;
+  //   margin-bottom: 20px;
+  // }
+  .paid__head-trx {
+    font-size: 22px;
+  }
+}
+
+@media only screen and (max-width: 1100px) and (min-device-width: 767px) {
+  .paid__graphic {
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+@media (max-width: 1100px) {
+  .main-title {
+    font-size: 25px;
   }
 
+  .tokens-box__sum {
+    font-size: 25px;
+  }
+
+  .history,
+  .paid {
+    width: 100%;
+  }
+
+  .history {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 996px) {
+  .main {
+    padding: 0;
+  }
+
+  .staking-block {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  .profit,
+  .profit-statistic {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 996px) and (min-device-width: 767px) {
+  .profit__head,
+  .profit__values {
+    justify-content: center;
+  }
+
+  .profit .select {
+    margin: 0 auto;
+  }
+
+  .profit__values {
+    margin-bottom: 30px;
+  }
+
+  .profit-statistic {
+    width: 70%;
+    margin-left: 17%;
+  }
+
+  .tokens-box {
+    width: 67.4%;
+  }
+
+  .tokens-box {
+    padding-left: 200px;
+  }
+
+  .tokens-box::before {
+    left: 130px;
+    background-size: 85% !important;
+  }
+
+  .apr-box {
+    width: 30%;
+    height: 176px;
+  }
+
+  .profit-box {
+    position: relative;
+    width: 100%;
+    -webkit-order: 3;
+    -ms-flex-order: 3;
+    order: 3;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .profit-box__head,
+  .crypt-items {
+    justify-content: center;
+  }
+
+  .profit-box__head {
+    margin-bottom: 20px;
+  }
+
+  .profit-box .select {
+    position: absolute;
+    right: 30px;
+  }
+}
+
+@media (max-width: 906px) {
+  .btc__main-crypt {
+    font-size: 27px;
+  }
+
+  .didvidents-crypt {
+    font-size: 22px;
+  }
+
+  .didvidents-crypt__sum {
+    font-weight: 500;
+  }
+
+  .didvidents-crypt__icon {
+    width: 35px;
+    height: 35px;
+    margin-right: 7px;
+  }
+
+  .didvidents-crypt__icon--btc {
+    width: 50px;
+    height: 50px;
+    margin-right: 13px;
+  }
+
+  .block-right__title {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 767px) {
   .header,
   .topmenu {
     height: 116px;
@@ -97,8 +254,8 @@
 
   .menu-icon {
     position: absolute;
-    left: 0;
-    top: 75%;
+    left: 9px;
+    top: 70%;
     transform: translateY(-50%);
   }
 
@@ -166,8 +323,227 @@
   }
 
   .topmenu-link {
-    min-height: 60px;
     font-size: 19px;
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+
+  .main__content {
+    padding-top: 35px;
+    max-width: 375px;
+  }
+
+  .main__content-buttons {
+    margin-bottom: 60px;
+  }
+
+  .main__content-btn {
+    font-weight: 400;
+    font-size: 12px;
+    padding: 13px 16px 13px 54px;
+    &::before {
+      left: -6px;
+      top: -12px;
+      background-size: 75%;
+    }
+  }
+
+  .main__content-btn--red {
+    margin-right: 23px;
+    &::before {
+      left: -9px;
+      top: -8px;
+    }
+  }
+
+  .main__content-btn--blue::before {
+    left: -8px;
+    top: -13px;
+  }
+
+  .section-bg--dividents {
+    display: none;
+  }
+
+  .section-bg--divs {
+    display: block;
+  }
+
+  .my-balance,
+  .btc {
+    width: 100%;
+  }
+
+  .btc {
+    background: url("../img/btc-bg-small.png") no-repeat right;
+    margin-bottom: 35px;
+  }
+
+  .didvidents__block {
+    padding-left: 20px;
+    padding-top: 27px;
+  }
+
+  .didvidents-crypt__icon--btc {
+    width: 43px;
+    height: 43px;
+  }
+
+  .didvidents-crypt:not(.btc__main-crypt) {
+    font-size: 18px;
+  }
+
+  .didvidents-crypt {
+    margin-bottom: 23px;
+  }
+
+  .btc__main-crypt {
+    margin-bottom: 25px;
+  }
+
+  .btc__crypt-list {
+    margin-left: 6px;
+    margin-bottom: 22px;
+  }
+
+  .btc__distribution {
+    margin-left: 5px;
+  }
+
+  .distribution__title {
+    margin-bottom: 13px;
+  }
+
+  .distribution__time {
+    margin-bottom: 6px;
+  }
+
+  .distribution__time {
+    font-size: 18px;
+  }
+
+  .my-balance {
+    position: relative;
+    background: none;
+    padding-bottom: 20px;
+    overflow: hidden;
+    &::after {
+      content: "";
+      position: absolute;
+      right: -37px;
+      top: 30%;
+      width: 80px;
+      height: 149px;
+      background: #fa305c;
+      filter: blur(100px);
+      z-index: 10;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 15px;
+      width: 190px;
+      height: 219px;
+      background: url("../img/balance-bg-small.png") no-repeat right 90%;
+      z-index: 20;
+    }
+  }
+
+  .my-balance__title {
+    margin-top: -12px;
+    margin-bottom: 17px;
+  }
+
+  .my-balance__crypt-list {
+    position: relative;
+    z-index: 20;
+    margin-bottom: 18px;
+  }
+
+  .history__head {
+    flex-wrap: wrap;
+  }
+
+  .dashboard__history {
+    padding-top: 26px;
+    padding-left: 21px;
+  }
+
+  .paid-select,
+  .history__head .select {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .history__buttons {
+    margin-bottom: 22px;
+  }
+
+  .history__head .select {
+    margin-top: 26px;
+  }
+
+  .dashboard__table {
+    min-width: 460px;
+  }
+
+  .dashboard__table tr {
+    height: 48px;
+  }
+
+  .dashboard__table-body {
+    height: 308px;
+  }
+
+  .dashboard__paid {
+    padding-right: 20px;
+    padding-top: 35px;
+  }
+
+  .paid__head-title {
+    font-size: 22px;
+  }
+
+  .paid__head-content {
+    flex-wrap: wrap;
+    margin-top: 0;
+  }
+
+  .paid__head-cost {
+    font-family: "Gotham Pro", sans-serif;
+    margin-top: 0;
+  }
+
+  .paid__head-crypt::after {
+    width: 20px;
+    height: 20px;
+    background-size: 20px;
+  }
+
+  .paid-graphic {
+    margin-bottom: 25px;
+  }
+
+  .paid-graphic--small {
+    display: block;
+  }
+
+  .paid-graphic--big {
+    display: none;
+  }
+
+  .paid__head {
+    margin-bottom: 30px;
+  }
+
+  .paid__graphic-date {
+    display: none;
+  }
+
+  .paid-paid__graphic-btn {
+    padding: 12px 23px;
   }
 }
 
@@ -184,5 +560,53 @@
     width: 21px;
     height: 21px;
     margin-right: 6px;
+  }
+
+  .paid__graphic-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: 1fr 1fr;
+  }
+}
+
+@media (max-width: 360px) {
+  button {
+    font-size: 12px;
+  }
+
+  .main__content-btn--red {
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  .didvidents__block {
+    padding-left: 15px;
+  }
+
+  .didvidents-crypt {
+    font-size: 20px;
+  }
+
+  .didvidents-crypt__icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .didvidents-crypt__icon--btc {
+    width: 36px;
+    height: 36px;
+    margin-right: 10px;
+  }
+
+  .didvidents-crypt:not(.btc__main-crypt) {
+    font-size: 15px;
+  }
+
+  .main-title {
+    font-size: 22px;
+  }
+
+  .my-balance__btn {
+    padding: 15px 23px;
   }
 }
