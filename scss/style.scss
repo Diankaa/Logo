@@ -1349,14 +1349,14 @@
 }
 
 .dashboard__table {
+  background-color: #161f2c;
   min-width: 414px;
   font-size: 12px;
 }
 
 .dashboard__table-caption {
   position: sticky;
-  top: 0;
-  background-color: #161f2c;
+  top: -1px;
   z-index: 66;
 }
 
