@@ -54,18 +54,10 @@ function changeStakingProfit(item) {
     item.find(".select-text").attr("data-date") ||
     item.find("option").attr("data-crypt-date");
 
-  const profitBtt = $("[data-" + cryptName + "-btt]").find(
-    ".crypt-num__sum"
-  );
-  const profitUsdt = $("[data-" + cryptName + "-usdt]").find(
-    ".crypt-num__sum"
-  );
-  const profitTrx = $("[data-" + cryptName + "-ytx]").find(
-    ".crypt-num__sum"
-  );
-  const profitBtc = $("[data-" + cryptName + "-btc]").find(
-    ".crypt-num__sum"
-  );
+  const profitBtt = $("[data-" + cryptName + "-btt]").find(".crypt-num__sum");
+  const profitUsdt = $("[data-" + cryptName + "-usdt]").find(".crypt-num__sum");
+  const profitTrx = $("[data-" + cryptName + "-ytx]").find(".crypt-num__sum");
+  const profitBtc = $("[data-" + cryptName + "-btc]").find(".crypt-num__sum");
 
   const dataDate = profitValues[cryptDate];
 
@@ -187,11 +179,11 @@ $(".main-select").each(function () {
 function initDropdown(item) {
   item.find(".select-dropdown").toggle();
 
-  $(window).click(function (e) {    
+  $(window).click(function (e) {
     if (
       !$(e.target).hasClass("select-btn") &&
       !$(e.target).hasClass("select-dropdown")
-    ) {      
+    ) {
       item.find(".select-dropdown").hide();
 
       hideArrow(item);
@@ -203,12 +195,12 @@ function changeSelect(item) {
   const customerSelect = item.siblings(".select");
   const customerBtn = customerSelect.find(".select-button");
   console.log(customerBtn);
-  
+
   customerSelect.find(".select-list li").click(function () {
     let getCurrentcrypt = customerBtn.find("img").attr("data-crypt") || "";
-    const currentSelectContent = $(this).clone();    
+    const currentSelectContent = $(this).clone();
     currentSelectContent.find(".select-crypt").remove();
-    
+
     const selectContent =
       customerBtn.get(0).innerHTML +
       `<span class="select-crypt"> ${getCurrentcrypt} </span>`;
@@ -236,29 +228,31 @@ function hideArrow(item) {
 $(".select").each(function () {
   const select = $(this);
   if ($(window).width() > 768) {
-    if (select.attr("data-event") == "hover") {
+    if (select.attr("data-event") == "hover") {    
       select
-        .hover(function () {
-          select.find(".select-dropdown").show();
+        .mouseenter(function () {    
+          console.log('y');
+              
+          select.find(".select-dropdown").show();        
           initArrow(select);
         })
-        .mouseleave(function () {
+        .mouseleave(function () {           
+          console.log('s');             
           select.find(".select-dropdown").hide();
           hideArrow(select);
         });
-    } else {
-      select.find(".select-btn").click(function (e) {        
+    } else {      
+      select.find(".select-btn").click(function (e) {
         e.preventDefault();
-
-        initArrow(select);
         initDropdown(select);
+        initArrow(select);
       });
     }
-  } else {
+  } else {    
     select.find(".select-btn").click(function (e) {
       e.preventDefault();
-      initArrow(select);
       initDropdown(select);
+      initArrow(select);
     });
   }
 });
@@ -275,27 +269,20 @@ $(".dashboard__table-body tr").each(function () {
     });
 });
 
-// $("#menu-toggle").click(function () {
-//   if ($(window).width() < 1118 && $(window).width() > 476) {
-//     $(".header__topmenu").toggleClass("tablet");
-//   } else {
-//     $(".header__topmenu").toggleClass("tablet");
-//   }
-// });
-
 $("#menu-toggle").click(function () {
-    $(".header__topmenu").toggleClass("mobile");
+  $(".header__topmenu").toggleClass("mobile");
 });
 
 if ($(window).width() < 996) {
   $(".main__content-btn--blue").text("About divis");
 }
 
-
-$(".table-scroll").each((function() {
+$(".table-scroll").each(function () {
   const moveBtn = $(this).find(".table-move");
 
-  if($(this).width() < parseInt($(this).find(".section-table").css("min-width"))) {
+  if (
+    $(this).width() < parseInt($(this).find(".section-table").css("min-width"))
+  ) {
     moveBtn.removeClass("hidden");
     $(this).addClass("scroll-hide");
     $(this).scroll(function () {
@@ -307,17 +294,4 @@ $(".table-scroll").each((function() {
     moveBtn.addClass("hidden");
     $(this).find(".dashboard__table-body").css("overflow", "auto");
   }
-}));
-
-// const tableValues = $(".profit-statistic");
-
-// if (tableValues.width() < parseInt($(".profit-table").css("min-width"))) {
-//   moveBtn.removeClass("hidden");
-//   tableValues.scroll(function () {
-//     tableValues.scrollLeft() > 0
-//       ? moveBtn.addClass("hidden")
-//       : moveBtn.removeClass("hidden");
-//   });
-// } else {
-//   moveBtn.addClass("hidden");
-// }
+});
