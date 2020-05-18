@@ -1607,29 +1607,32 @@
                     my dividents
                   </button>
                 </div>
-                <div class="dashboard__table-item table-scroll">
-                  <div class="dashboard__table-caption">
-                    <!-- dashboard__table -->
-                    <table class="dashboard__table section-table">
-                      <thead>
-                        <tr class="table-titles dashboard__table-titles">
-                          <th class="table-titles__date">
-                            Date
-                          </th>
-                          <th class="table-titles__distribution">
-                            Distribution
-                          </th>
-                          <th class="table-titles__tokens">
-                            Frozen Tokens
-                          </th>
-                          <th class="table-titles__trx">
-                            100k <span class="text-upper">xxx(trx)</span>
-                          </th>
-                        </tr>
-                      </thead>
-                    </table>
-                  </div>
-                  <!-- dashboard__table end -->
+                <div class="dashboard__table-wrapper">
+                  <div class="dashboard__table-item table-scroll">
+                    <div class="dashboard__table-caption">
+                      <!-- dashboard__table -->
+                      <table
+                        class="dashboard__table dashboard__table--body section-table"
+                      >
+                        <thead>
+                          <tr class="table-titles dashboard__table-titles">
+                            <th class="table-titles__date">
+                              Date
+                            </th>
+                            <th class="table-titles__distribution">
+                              Distribution
+                            </th>
+                            <th class="table-titles__tokens">
+                              Frozen Tokens
+                            </th>
+                            <th class="table-titles__trx">
+                              100k <span class="text-upper">xxx(trx)</span>
+                            </th>
+                          </tr>
+                        </thead>
+                      </table>
+                    </div>
+                    <!-- dashboard__table end -->
                     <div class="table-move hidden">
                       <div class="table-move__shadow"></div>
                     </div>
@@ -2700,9 +2703,542 @@
                               </ul>
                             </td>
                           </tr>
+                          <tr>
+                            <td class="table-body__date">
+                              <div class="table-body__item">
+                                <span class="crypt-date">22.04</span>
+                              </div>
+                            </td>
+                            <td class="table-body__distribution">
+                              <div class="table-body__item">
+                                <span class="dashboard-crypt crypt">
+                                  <img
+                                    class="dashboard-crypt__icon"
+                                    src="img/btc.png"
+                                    alt="btc"
+                                  />
+                                  <span class="dashboard-crypt__num"
+                                    >0.00012345
+                                  </span>
+                                </span>
+                              </div>
+                              <ul class="crypt-list">
+                                <li class="crypt-list__item">
+                                  <span class="dashboard-crypt crypt">
+                                    <img
+                                      class="dashboard-crypt__icon"
+                                      src="img/trx.png"
+                                      alt="trx"
+                                    />
+                                    <span class="dashboard-crypt__num"
+                                      >19908.51<span class="text-gray">00</span>
+                                    </span>
+                                  </span>
+                                </li>
+                                <li class="crypt-list__item">
+                                  <span class="dashboard-crypt crypt">
+                                    <img
+                                      class="dashboard-crypt__icon"
+                                      src="img/usdt.png"
+                                      alt="usdt"
+                                    />
+                                    <span class="dashboard-crypt__num">
+                                      880.51<span class="text-gray">0000</span>
+                                    </span>
+                                  </span>
+                                </li>
+                                <li class="crypt-list__item">
+                                  <span class="dashboard-crypt crypt">
+                                    <img
+                                      class="dashboard-crypt__icon"
+                                      src="img/btt.png"
+                                      alt="btt"
+                                    />
+                                    <span class="dashboard-crypt__num">
+                                      12000.51<span class="text-gray">00</span>
+                                    </span>
+                                  </span>
+                                </li>
+                              </ul>
+                            </td>
+                            <td class="table-body__tokens">
+                              <div class="table-body__item">
+                                <span class="dashboard-crypt crypt">
+                                  <img
+                                    class="dashboard-crypt__icon"
+                                    src="img/frozen-tokens.png"
+                                    alt="frozen-tokens"
+                                  />
+                                  <span class="dashboard-crypt__num"
+                                    >1200 kk
+                                  </span>
+                                </span>
+                              </div>
+                            </td>
+                            <td class="table-body__trx">
+                              <div class="table-body__item">
+                                <div class="select-buttons">
+                                  <button class="dashboard__table-btn">
+                                    <span class="dashboard-crypt crypt">
+                                      <img
+                                        class="dashboard-crypt__icon"
+                                        src="img/btc.png"
+                                        alt="btc"
+                                      />
+                                      <span class="dashboard-crypt__num"
+                                        >0.00012345
+                                      </span>
+                                    </span>
+                                    <span
+                                      class="select-arrow select-arrow--section dashboard__table-arrow"
+                                    ></span>
+                                  </button>
+                                  <div class="select-btn"></div>
+                                </div>
+                              </div>
+                              <ul class="crypt-list">
+                                <li class="crypt-list__item">
+                                  <span class="dashboard-crypt crypt">
+                                    <img
+                                      class="dashboard-crypt__icon"
+                                      src="img/trx.png"
+                                      alt="trx"
+                                    />
+                                    <span class="dashboard-crypt__num"
+                                      >19908.51<span class="text-gray">00</span>
+                                    </span>
+                                  </span>
+                                </li>
+                                <li class="crypt-list__item">
+                                  <span class="dashboard-crypt crypt">
+                                    <img
+                                      class="dashboard-crypt__icon"
+                                      src="img/usdt.png"
+                                      alt="usdt"
+                                    />
+                                    <span class="dashboard-crypt__num">
+                                      880.51<span class="text-gray">0000</span>
+                                    </span>
+                                  </span>
+                                </li>
+                                <li class="crypt-list__item">
+                                  <span class="dashboard-crypt crypt">
+                                    <img
+                                      class="dashboard-crypt__icon"
+                                      src="img/btt.png"
+                                      alt="btt"
+                                    />
+                                    <span class="dashboard-crypt__num">
+                                      12000.51<span class="text-gray">00</span>
+                                    </span>
+                                  </span>
+                                </li>
+                              </ul>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="table-body__date">
+                              <div class="table-body__item">
+                                <span class="crypt-date">22.04</span>
+                              </div>
+                            </td>
+                            <td class="table-body__distribution">
+                              <div class="table-body__item">
+                                <span class="dashboard-crypt crypt">
+                                  <img
+                                    class="dashboard-crypt__icon"
+                                    src="img/btc.png"
+                                    alt="btc"
+                                  />
+                                  <span class="dashboard-crypt__num"
+                                    >0.00012345
+                                  </span>
+                                </span>
+                              </div>
+                              <ul class="crypt-list">
+                                <li class="crypt-list__item">
+                                  <span class="dashboard-crypt crypt">
+                                    <img
+                                      class="dashboard-crypt__icon"
+                                      src="img/trx.png"
+                                      alt="trx"
+                                    />
+                                    <span class="dashboard-crypt__num"
+                                      >19908.51<span class="text-gray">00</span>
+                                    </span>
+                                  </span>
+                                </li>
+                                <li class="crypt-list__item">
+                                  <span class="dashboard-crypt crypt">
+                                    <img
+                                      class="dashboard-crypt__icon"
+                                      src="img/usdt.png"
+                                      alt="usdt"
+                                    />
+                                    <span class="dashboard-crypt__num">
+                                      880.51<span class="text-gray">0000</span>
+                                    </span>
+                                  </span>
+                                </li>
+                                <li class="crypt-list__item">
+                                  <span class="dashboard-crypt crypt">
+                                    <img
+                                      class="dashboard-crypt__icon"
+                                      src="img/btt.png"
+                                      alt="btt"
+                                    />
+                                    <span class="dashboard-crypt__num">
+                                      12000.51<span class="text-gray">00</span>
+                                    </span>
+                                  </span>
+                                </li>
+                              </ul>
+                            </td>
+                            <td class="table-body__tokens">
+                              <div class="table-body__item">
+                                <span class="dashboard-crypt crypt">
+                                  <img
+                                    class="dashboard-crypt__icon"
+                                    src="img/frozen-tokens.png"
+                                    alt="frozen-tokens"
+                                  />
+                                  <span class="dashboard-crypt__num"
+                                    >1200 kk
+                                  </span>
+                                </span>
+                              </div>
+                            </td>
+                            <td class="table-body__trx">
+                              <div class="table-body__item">
+                                <div class="select-buttons">
+                                  <button class="dashboard__table-btn">
+                                    <span class="dashboard-crypt crypt">
+                                      <img
+                                        class="dashboard-crypt__icon"
+                                        src="img/btc.png"
+                                        alt="btc"
+                                      />
+                                      <span class="dashboard-crypt__num"
+                                        >0.00012345
+                                      </span>
+                                    </span>
+                                    <span
+                                      class="select-arrow select-arrow--section dashboard__table-arrow"
+                                    ></span>
+                                  </button>
+                                  <div class="select-btn"></div>
+                                </div>
+                              </div>
+                              <ul class="crypt-list">
+                                <li class="crypt-list__item">
+                                  <span class="dashboard-crypt crypt">
+                                    <img
+                                      class="dashboard-crypt__icon"
+                                      src="img/trx.png"
+                                      alt="trx"
+                                    />
+                                    <span class="dashboard-crypt__num"
+                                      >19908.51<span class="text-gray">00</span>
+                                    </span>
+                                  </span>
+                                </li>
+                                <li class="crypt-list__item">
+                                  <span class="dashboard-crypt crypt">
+                                    <img
+                                      class="dashboard-crypt__icon"
+                                      src="img/usdt.png"
+                                      alt="usdt"
+                                    />
+                                    <span class="dashboard-crypt__num">
+                                      880.51<span class="text-gray">0000</span>
+                                    </span>
+                                  </span>
+                                </li>
+                                <li class="crypt-list__item">
+                                  <span class="dashboard-crypt crypt">
+                                    <img
+                                      class="dashboard-crypt__icon"
+                                      src="img/btt.png"
+                                      alt="btt"
+                                    />
+                                    <span class="dashboard-crypt__num">
+                                      12000.51<span class="text-gray">00</span>
+                                    </span>
+                                  </span>
+                                </li>
+                              </ul>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="table-body__date">
+                              <div class="table-body__item">
+                                <span class="crypt-date">22.04</span>
+                              </div>
+                            </td>
+                            <td class="table-body__distribution">
+                              <div class="table-body__item">
+                                <span class="dashboard-crypt crypt">
+                                  <img
+                                    class="dashboard-crypt__icon"
+                                    src="img/btc.png"
+                                    alt="btc"
+                                  />
+                                  <span class="dashboard-crypt__num"
+                                    >0.00012345
+                                  </span>
+                                </span>
+                              </div>
+                              <ul class="crypt-list">
+                                <li class="crypt-list__item">
+                                  <span class="dashboard-crypt crypt">
+                                    <img
+                                      class="dashboard-crypt__icon"
+                                      src="img/trx.png"
+                                      alt="trx"
+                                    />
+                                    <span class="dashboard-crypt__num"
+                                      >19908.51<span class="text-gray">00</span>
+                                    </span>
+                                  </span>
+                                </li>
+                                <li class="crypt-list__item">
+                                  <span class="dashboard-crypt crypt">
+                                    <img
+                                      class="dashboard-crypt__icon"
+                                      src="img/usdt.png"
+                                      alt="usdt"
+                                    />
+                                    <span class="dashboard-crypt__num">
+                                      880.51<span class="text-gray">0000</span>
+                                    </span>
+                                  </span>
+                                </li>
+                                <li class="crypt-list__item">
+                                  <span class="dashboard-crypt crypt">
+                                    <img
+                                      class="dashboard-crypt__icon"
+                                      src="img/btt.png"
+                                      alt="btt"
+                                    />
+                                    <span class="dashboard-crypt__num">
+                                      12000.51<span class="text-gray">00</span>
+                                    </span>
+                                  </span>
+                                </li>
+                              </ul>
+                            </td>
+                            <td class="table-body__tokens">
+                              <div class="table-body__item">
+                                <span class="dashboard-crypt crypt">
+                                  <img
+                                    class="dashboard-crypt__icon"
+                                    src="img/frozen-tokens.png"
+                                    alt="frozen-tokens"
+                                  />
+                                  <span class="dashboard-crypt__num"
+                                    >1200 kk
+                                  </span>
+                                </span>
+                              </div>
+                            </td>
+                            <td class="table-body__trx">
+                              <div class="table-body__item">
+                                <div class="select-buttons">
+                                  <button class="dashboard__table-btn">
+                                    <span class="dashboard-crypt crypt">
+                                      <img
+                                        class="dashboard-crypt__icon"
+                                        src="img/btc.png"
+                                        alt="btc"
+                                      />
+                                      <span class="dashboard-crypt__num"
+                                        >0.00012345
+                                      </span>
+                                    </span>
+                                    <span
+                                      class="select-arrow select-arrow--section dashboard__table-arrow"
+                                    ></span>
+                                  </button>
+                                  <div class="select-btn"></div>
+                                </div>
+                              </div>
+                              <ul class="crypt-list">
+                                <li class="crypt-list__item">
+                                  <span class="dashboard-crypt crypt">
+                                    <img
+                                      class="dashboard-crypt__icon"
+                                      src="img/trx.png"
+                                      alt="trx"
+                                    />
+                                    <span class="dashboard-crypt__num"
+                                      >19908.51<span class="text-gray">00</span>
+                                    </span>
+                                  </span>
+                                </li>
+                                <li class="crypt-list__item">
+                                  <span class="dashboard-crypt crypt">
+                                    <img
+                                      class="dashboard-crypt__icon"
+                                      src="img/usdt.png"
+                                      alt="usdt"
+                                    />
+                                    <span class="dashboard-crypt__num">
+                                      880.51<span class="text-gray">0000</span>
+                                    </span>
+                                  </span>
+                                </li>
+                                <li class="crypt-list__item">
+                                  <span class="dashboard-crypt crypt">
+                                    <img
+                                      class="dashboard-crypt__icon"
+                                      src="img/btt.png"
+                                      alt="btt"
+                                    />
+                                    <span class="dashboard-crypt__num">
+                                      12000.51<span class="text-gray">00</span>
+                                    </span>
+                                  </span>
+                                </li>
+                              </ul>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="table-body__date">
+                              <div class="table-body__item">
+                                <span class="crypt-date">22.04</span>
+                              </div>
+                            </td>
+                            <td class="table-body__distribution">
+                              <div class="table-body__item">
+                                <span class="dashboard-crypt crypt">
+                                  <img
+                                    class="dashboard-crypt__icon"
+                                    src="img/btc.png"
+                                    alt="btc"
+                                  />
+                                  <span class="dashboard-crypt__num"
+                                    >0.00012345
+                                  </span>
+                                </span>
+                              </div>
+                              <ul class="crypt-list">
+                                <li class="crypt-list__item">
+                                  <span class="dashboard-crypt crypt">
+                                    <img
+                                      class="dashboard-crypt__icon"
+                                      src="img/trx.png"
+                                      alt="trx"
+                                    />
+                                    <span class="dashboard-crypt__num"
+                                      >19908.51<span class="text-gray">00</span>
+                                    </span>
+                                  </span>
+                                </li>
+                                <li class="crypt-list__item">
+                                  <span class="dashboard-crypt crypt">
+                                    <img
+                                      class="dashboard-crypt__icon"
+                                      src="img/usdt.png"
+                                      alt="usdt"
+                                    />
+                                    <span class="dashboard-crypt__num">
+                                      880.51<span class="text-gray">0000</span>
+                                    </span>
+                                  </span>
+                                </li>
+                                <li class="crypt-list__item">
+                                  <span class="dashboard-crypt crypt">
+                                    <img
+                                      class="dashboard-crypt__icon"
+                                      src="img/btt.png"
+                                      alt="btt"
+                                    />
+                                    <span class="dashboard-crypt__num">
+                                      12000.51<span class="text-gray">00</span>
+                                    </span>
+                                  </span>
+                                </li>
+                              </ul>
+                            </td>
+                            <td class="table-body__tokens">
+                              <div class="table-body__item">
+                                <span class="dashboard-crypt crypt">
+                                  <img
+                                    class="dashboard-crypt__icon"
+                                    src="img/frozen-tokens.png"
+                                    alt="frozen-tokens"
+                                  />
+                                  <span class="dashboard-crypt__num"
+                                    >1200 kk
+                                  </span>
+                                </span>
+                              </div>
+                            </td>
+                            <td class="table-body__trx">
+                              <div class="table-body__item">
+                                <div class="select-buttons">
+                                  <button class="dashboard__table-btn">
+                                    <span class="dashboard-crypt crypt">
+                                      <img
+                                        class="dashboard-crypt__icon"
+                                        src="img/btc.png"
+                                        alt="btc"
+                                      />
+                                      <span class="dashboard-crypt__num"
+                                        >0.00012345
+                                      </span>
+                                    </span>
+                                    <span
+                                      class="select-arrow select-arrow--section dashboard__table-arrow"
+                                    ></span>
+                                  </button>
+                                  <div class="select-btn"></div>
+                                </div>
+                              </div>
+                              <ul class="crypt-list">
+                                <li class="crypt-list__item">
+                                  <span class="dashboard-crypt crypt">
+                                    <img
+                                      class="dashboard-crypt__icon"
+                                      src="img/trx.png"
+                                      alt="trx"
+                                    />
+                                    <span class="dashboard-crypt__num"
+                                      >19908.51<span class="text-gray">00</span>
+                                    </span>
+                                  </span>
+                                </li>
+                                <li class="crypt-list__item">
+                                  <span class="dashboard-crypt crypt">
+                                    <img
+                                      class="dashboard-crypt__icon"
+                                      src="img/usdt.png"
+                                      alt="usdt"
+                                    />
+                                    <span class="dashboard-crypt__num">
+                                      880.51<span class="text-gray">0000</span>
+                                    </span>
+                                  </span>
+                                </li>
+                                <li class="crypt-list__item">
+                                  <span class="dashboard-crypt crypt">
+                                    <img
+                                      class="dashboard-crypt__icon"
+                                      src="img/btt.png"
+                                      alt="btt"
+                                    />
+                                    <span class="dashboard-crypt__num">
+                                      12000.51<span class="text-gray">00</span>
+                                    </span>
+                                  </span>
+                                </li>
+                              </ul>
+                            </td>
+                          </tr>
                         </tbody>
                       </table>
                     </div>
+                  </div>
                 </div>
               </div>
               <div class="dashboard__paid paid block">
@@ -2816,37 +3352,43 @@
                 <div class="faq-box__icon-item">
                   <img class="faq-box__icon" src="img/cost.png" alt="cost" />
                 </div>
-                <h3 class="faq-box__title">
-                  How Much Does Buying Parts Cost?
-                </h3>
-                <p class="faq-box__info text-gray">
-                  All for free! Even if you pay into credit.
-                </p>
+                <div class="faq-box__info">
+                  <h3 class="faq-box__title">
+                    How Much Does Buying Parts Cost?
+                  </h3>
+                  <p class="faq-box__info text-gray">
+                    All for free! Even if you pay into credit.
+                  </p>
+                </div>
               </div>
               <div class="faq-box">
                 <div class="faq-box__icon-item">
                   <img class="faq-box__icon" src="img/buy.png" alt="buy" />
                 </div>
-                <h3 class="faq-box__title">
-                  How many items can you buy in one go?
-                </h3>
-                <p class="faq-box__info text-gray">
-                  How much the soul desires. <br />
-                  There are no restrictions on the number of contracts, even if
-                  you already have a lot of installments
-                </p>
+                <div class="faq-box__info">
+                  <h3 class="faq-box__title">
+                    How many items can you buy in one go?
+                  </h3>
+                  <p class="faq-box__info text-gray">
+                    How much the soul desires. <br />
+                    There are no restrictions on the number of contracts, even if
+                    you already have a lot of installments
+                  </p>
+                </div>
               </div>
               <div class="faq-box">
                 <div class="faq-box__icon-item">
                   <img class="faq-box__icon" src="img/limit.png" alt="limit" />
                 </div>
-                <h3 class="faq-box__title">
-                  What is the Part Purchase Limit?
-                </h3>
-                <p class="faq-box__info text-gray">
-                  Your installment limit is the Purchase Limit in parts and the
-                  number of contracts completed is unlimited.
-                </p>
+                <div class="faq-box__info">
+                  <h3 class="faq-box__title">
+                    What is the Part Purchase Limit?
+                  </h3>
+                  <p class="faq-box__info text-gray">
+                    Your installment limit is the Purchase Limit in parts and the
+                    number of contracts completed is unlimited.
+                  </p>
+                </div>
               </div>
             </div>
             <!-- faq-row end -->
@@ -2860,14 +3402,16 @@
                     alt="documents"
                   />
                 </div>
-                <h3 class="faq-box__title">
-                  What documents are required to complete the Part Purchase?
-                </h3>
-                <p class="faq-box__info text-gray">
-                  None! You do not even have to wait for the bank to consider
-                  your application, the clearance is instant - a gasp and you
-                  are already home with the goods
-                </p>
+                <div class="faq-box__info">
+                  <h3 class="faq-box__title">
+                    What documents are required to complete the Part Purchase?
+                  </h3>
+                  <p class="faq-box__info text-gray">
+                    None! You do not even have to wait for the bank to consider
+                    your application, the clearance is instant - a gasp and you
+                    are already home with the goods
+                  </p>
+                </div>
               </div>
               <div class="faq-box">
                 <div class="faq-box__icon-item">
@@ -2877,29 +3421,33 @@
                     alt="comission"
                   />
                 </div>
-                <h3 class="faq-box__title">
-                  Will the Commission for payment of the monthly payment on
-                  account of credit?
-                </h3>
-                <p class="faq-box__info text-gray">
-                  If the monthly payment is credited to the credit funds, the
-                  commission is not written off. You really don't overpay.
-                </p>
+                <div class="faq-box__info">
+                  <h3 class="faq-box__title">
+                    Will the Commission for payment of the monthly payment on
+                    account of credit?
+                  </h3>
+                  <p class="faq-box__info text-gray">
+                    If the monthly payment is credited to the credit funds, the
+                    commission is not written off. You really don't overpay.
+                  </p>
+                </div>
               </div>
               <div class="faq-box">
                 <div class="faq-box__icon-item">
                   <img class="faq-box__icon" src="img/trick.png" alt="trick" />
                 </div>
-                <h3 class="faq-box__title">
-                  Where's the trick?
-                </h3>
-                <p class="faq-box__info text-gray">
-                  No installments, installments are paid by the store where you
-                  shop. Recommended retail pricing policies from suppliers
-                  prevent the store from lowering its price. But he's ready to
-                  lower your revenue so you can make a purchase. Knowing this,
-                  you may want to buy something from our partners.
-                </p>
+                <div class="faq-box__info">
+                  <h3 class="faq-box__title">
+                    Where's the trick?
+                  </h3>
+                  <p class="faq-box__info text-gray">
+                    No installments, installments are paid by the store where you
+                    shop. Recommended retail pricing policies from suppliers
+                    prevent the store from lowering its price. But he's ready to
+                    lower your revenue so you can make a purchase. Knowing this,
+                    you may want to buy something from our partners.
+                  </p>
+                </div>
               </div>
             </div>
             <!-- faq-row end -->

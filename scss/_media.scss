@@ -232,17 +232,6 @@
 }
 
 @media (max-width: 767px) {
-  .header,
-  .topmenu {
-    height: 116px;
-  }
-
-  .header__wrapper,
-  .topmenu {
-    align-items: flex-end;
-    padding-bottom: 10px;
-  }
-
   .header__logo {
     display: none;
   }
@@ -255,7 +244,7 @@
   .menu-icon {
     position: absolute;
     left: 9px;
-    top: 70%;
+    top: 56%;
     transform: translateY(-50%);
   }
 
@@ -462,6 +451,44 @@
     margin-bottom: 18px;
   }
 
+  .estimated-profit {
+    padding-bottom: 18px;
+  }
+
+  .profit__head {
+    margin-bottom: 32px;
+  }
+
+  .profit__head-title {
+    font-size: 22px;
+  }
+
+  .profit__head-img {
+    margin-right: 7px;
+  }
+
+  .profit__head-img img {
+    width: 43px;
+    height: 53px;
+  }
+
+  .profit__head-descr {
+    font-size: 12px;
+  }
+
+  .profit-value:first-child {
+    margin-right: 50px;
+  }
+
+  .profit__values {
+    margin-top: 40px;
+    margin-bottom: 22px;
+  }
+
+  .profit-table {
+    min-width: 440px;
+  }
+
   .history__head {
     flex-wrap: wrap;
   }
@@ -485,11 +512,12 @@
     margin-top: 26px;
   }
 
-  .dashboard__table {
+  .dashboard__table,
+  .dashboard__table-wrapper::before {
     min-width: 460px;
   }
 
-  .dashboard__table tr {
+  .dashboard__table-body tr {
     height: 48px;
   }
 
@@ -498,7 +526,7 @@
   }
 
   .dashboard__paid {
-    padding-right: 20px;
+    padding-right: 15px;
     padding-top: 35px;
   }
 
@@ -545,6 +573,50 @@
   .paid-paid__graphic-btn {
     padding: 12px 23px;
   }
+
+  .faq .section-bg {
+    max-width: 28%;
+  }
+
+  .faq-row {
+    flex-direction: column;
+  }
+
+  .faq-box {
+    width: 100%;
+    display: flex;
+    margin-bottom: 40px;
+  }
+
+  .faq-box:last-child {
+    margin-bottom: 0;
+  }
+
+  .faq-box__icon--doc {
+    position: static;
+  }
+
+  .faq-box__title {
+    font-size: 18px;
+    line-height: 27px;
+    margin-bottom: 5px;
+  }
+
+  .faq-box__info {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .faq-box__icon-item {
+    max-width: 70px;
+    max-height: 70px;
+  }
+
+  .faq-box__icon {
+    width: 70px;
+    height: 70px;
+    margin-left: -7px;
+  }
 }
 
 @media (max-width: 375px) {
@@ -562,10 +634,8 @@
     margin-right: 6px;
   }
 
-  .paid__graphic-buttons {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-auto-rows: 1fr 1fr;
+  .paid-paid__graphic-btn {
+    padding: 9px 16px;
   }
 }
 
@@ -604,5 +674,21 @@
 
   .my-balance__btn {
     padding: 15px 23px;
+  }
+
+  .profit-value:first-child {
+    margin-right: 35px;
+  }
+
+  .profit-value__sum {
+    font-size: 25px;
+  }
+
+  .history-btn:first-child {
+    margin-right: 17px;
+  }
+
+  .history-btn {
+    font-size: 13px;
   }
 }

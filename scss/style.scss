@@ -937,6 +937,10 @@
 
 // STAKING
 
+.staking {
+  display: none;
+}
+
 .main-content__staking {
   position: relative;
   padding-bottom: 85px;
@@ -1073,6 +1077,10 @@
 }
 
 // TOKEN
+
+.token {
+  display: none;
+}
 
 .main-content__token {
   padding-bottom: 97px;
@@ -1313,6 +1321,7 @@
 
 .dashboard__history {
   padding: 20px 17px 0 32px;
+  overflow: hidden;
 }
 
 .history__head {
@@ -1348,25 +1357,41 @@
   margin-right: 30px;
 }
 
+.dashboard__table-wrapper {
+  position: relative;
+  &::before {
+    content: "";
+    min-width: 414px;
+    width: 100%;
+    height: 10px;
+    background-color: #161f2c;
+    position: absolute;
+    top: -7px;
+    z-index: 40;
+  }
+}
+
 .dashboard__table-item {
   position: relative;
+  border-bottom-right-radius: 20px;
   margin-right: -17px;
 }
 
 .dashboard__table {
+  position: relative;
   background-color: #161f2c;
   min-width: 414px;
   font-size: 12px;
 }
 
-.dashboard__table-caption {
-  position: sticky;
-  top: -1px;
-  z-index: 35;
-}
-
 .dashboard__table tr {
   height: 45px;
+}
+
+.dashboard__table-caption {
+  position: sticky;
+  top: 0;
+  z-index: 35;
 }
 
 .table-titles__date {
@@ -1555,9 +1580,10 @@
 }
 
 .paid__graphic-buttons {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 9px;
+  display: flex;
+  // display: grid;
+  // grid-template-columns: 1fr 1fr 1fr 1fr;
+  // grid-gap: 9px;
 }
 
 .paid-paid__graphic-btn {
@@ -1566,6 +1592,7 @@
   padding: 11px;
   border: 0.854545px solid #55657e;
   border-radius: 8.54545px;
+  margin-right: 10px;
   &.active {
     background: #55657e;
     border: none;
@@ -1575,51 +1602,6 @@
 .paid-paid__graphic-btn:last-child {
   margin-right: 0;
 }
-
-// .paid__graphic-line {
-//   position: relative;
-//   height: 2px;
-//   width: 100%;
-//   background-color: #fa305c;
-// }
-
-// .graphic-interval {
-//   position: absolute;
-//   left: 62%;
-//   transform: translateX(-50%) translateY(-34%);
-//   max-width: 140px;
-//   width: 100%;
-// }
-
-// .graphic-interval__item {
-//   position: relative;
-//   height: 48px;
-//   background: #1b2233;
-//   border-radius: 10px;
-//   margin-bottom: 10px;
-//   &::before,
-//   &::after {
-//     content: "";
-//     position: absolute;
-//     top: 50%;
-//     transform: translateY(-50%);
-//     width: 3px;
-//     height: 23px;
-//     background-color: #fff;
-//   }
-//   &::before {
-//     left: 0;
-//   }
-//   &::after {
-//     content: "";
-//     right: 0;
-//   }
-// }
-
-// .graphic-interval__date {
-//   text-align: center;
-//   font-size: 12px;
-// }
 
 .paid__graphic-line {
   position: relative;
