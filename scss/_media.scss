@@ -11,7 +11,9 @@
 }
 
 @media (max-width: 1300px) {
-  .aside-menu {
+  .aside-menu,
+  .header__all-games,
+  .header__topmenu  {
     display: none;
   }
 
@@ -21,14 +23,6 @@
 
   .header__wrapper {
     padding: 0 18px;
-  }
-
-  .header__all-games {
-    display: none;
-  }
-
-  .header__topmenu {
-    display: none;
   }
 
   .menu-icon {
@@ -162,7 +156,9 @@
 
 @media only screen and (max-width: 996px) and (min-device-width: 767px) {
   .profit__head,
-  .profit__values {
+  .profit__values,
+  .profit-box__head,
+  .crypt-items {
     justify-content: center;
   }
 
@@ -200,17 +196,10 @@
   .profit-box {
     position: relative;
     width: 100%;
-    -webkit-order: 3;
-    -ms-flex-order: 3;
     order: 3;
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
-  }
-
-  .profit-box__head,
-  .crypt-items {
-    justify-content: center;
   }
 
   .profit-box__head {
@@ -263,7 +252,12 @@
 }
 
 @media (max-width: 767px) {
-  .header__logo {
+  .header__logo,
+  .section-bg--desktop,
+  .main__content-btn--desktop,
+  .apr-box__img-main,
+  .paid__graphic-date,
+  .paid-graphic--big {
     display: none;
   }
 
@@ -388,12 +382,12 @@
     margin-bottom: 10px;
   }
 
-  .section-bg--desktop {
-    display: none;
-  }
-
   .section-bg--mobile {
     display: block;
+  }
+
+  .main__content-btn--mobile {
+    display: inline-block;
   }
 
   .my-balance,
@@ -408,6 +402,10 @@
 
   .main-content__didvidents {
     padding-bottom: 47px;
+  }
+
+  .subtitle {
+    font-size: 22px;
   }
 
   .didvidents__block {
@@ -500,9 +498,11 @@
     margin-bottom: 32px;
   }
 
-  .profit__head-title {
+  .profit__head-title,
+  .paid__head-title {
     font-size: 22px;
   }
+
 
   .profit__head-img {
     margin-right: 7px;
@@ -558,7 +558,6 @@
   }
 
   .tokens-box__title {
-    font-size: 22px;
     margin-bottom: 13px;
   }
 
@@ -579,7 +578,6 @@
   }
 
   .profit-box__title {
-    font-size: 22px;
     margin-right: 10px;
   }
 
@@ -597,10 +595,6 @@
 
   .apr-box {
     height: 175px;
-  }
-
-  .apr-box__img-main {
-    display: none;
   }
 
   .apr-box__img-hid {
@@ -693,10 +687,6 @@
     height: 36px;
   }
 
-  .token-detail__title {
-    font-size: 22px;
-  }
-
   .detail-list {
     width: 100%;
     padding-top: 27px;
@@ -758,10 +748,6 @@
     padding-top: 35px;
   }
 
-  .paid__head-title {
-    font-size: 22px;
-  }
-
   .paid__head-content {
     flex-wrap: wrap;
     margin-top: 0;
@@ -786,16 +772,8 @@
     display: block;
   }
 
-  .paid-graphic--big {
-    display: none;
-  }
-
   .paid__head {
     margin-bottom: 30px;
-  }
-
-  .paid__graphic-date {
-    display: none;
   }
 
   .paid__graphic-buttons {
