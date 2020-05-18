@@ -388,11 +388,11 @@
     margin-bottom: 10px;
   }
 
-  .section-bg--dividents {
+  .section-bg--desktop {
     display: none;
   }
 
-  .section-bg--divs {
+  .section-bg--mobile {
     display: block;
   }
 
@@ -528,6 +528,87 @@
 
   .profit-table {
     min-width: 440px;
+  }
+
+  .staking__top-info {
+    left: 0;
+    top: -15px;
+    font-size: 15px;
+  }
+
+  .staking-block {
+    padding: 25px 20px;
+  }
+
+  .tokens-box,
+  .profit-box,
+  .apr-box {
+    width: 100%;
+  }
+
+  .tokens-box {
+    padding-left: 70px;
+    padding-top: 13px;
+  }
+
+  .tokens-box::before {
+    background-size: 65%;
+    top: 7px;
+    left: 34px;
+  }
+
+  .tokens-box__title {
+    font-size: 22px;
+    margin-bottom: 13px;
+  }
+
+  .tokens-box__crypt {
+    font-size: 15px;
+  }
+
+  .profit-box {
+    background-image: url(../img/profit-bg-small.png);
+    background-repeat: no-repeat;
+    background-position: right 100%;
+    padding: 21px 21px 9px 20px;
+    margin: 20px 0;
+  }
+
+  .profit-box__head {
+    margin-bottom: 13px;
+  }
+
+  .profit-box__title {
+    font-size: 22px;
+    margin-right: 10px;
+  }
+
+  .profit-box .select-button {
+    padding-right: 58px;
+  }
+
+  .apr-box {
+    padding: 11px 16px 21px 20px;
+  }
+
+  .crypt-items {
+    flex-wrap: wrap;
+  }
+
+  .apr-box {
+    height: 175px;
+  }
+
+  .apr-box__img-main {
+    display: none;
+  }
+
+  .apr-box__img-hid {
+    display: block;
+  }
+
+  .apr-box__content {
+    top: 22px;
   }
 
   .main-content__token {
@@ -786,6 +867,14 @@
     height: 21px;
     margin-right: 6px;
   }
+
+  .profit-box__head {
+    align-items: center;
+  }
+
+  .profit-box .select {
+    margin-top: 0;
+  }
 }
 
 @media (max-width: 360px) {
@@ -853,6 +942,15 @@
 
   .profit-value__sum {
     font-size: 25px;
+  }
+
+  .profit-box {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .profit-box .select-button {
+    padding: 11px 40px 11px 16px;
   }
 
   .history-btn:first-child {

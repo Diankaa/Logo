@@ -228,27 +228,27 @@ function hideArrow(item) {
 $(".select").each(function () {
   const select = $(this);
   if ($(window).width() > 768) {
-    if (select.attr("data-event") == "hover") {    
+    if (select.attr("data-event") == "hover") {
       select
-        .mouseenter(function () {    
-          console.log('y');
-              
-          select.find(".select-dropdown").show();        
+        .mouseenter(function () {
+          console.log("y");
+
+          select.find(".select-dropdown").show();
           initArrow(select);
         })
-        .mouseleave(function () {           
-          console.log('s');             
+        .mouseleave(function () {
+          console.log("s");
           select.find(".select-dropdown").hide();
           hideArrow(select);
         });
-    } else {      
+    } else {
       select.find(".select-btn").click(function (e) {
         e.preventDefault();
         initDropdown(select);
         initArrow(select);
       });
     }
-  } else {    
+  } else {
     select.find(".select-btn").click(function (e) {
       e.preventDefault();
       initDropdown(select);
@@ -296,3 +296,18 @@ $(".table-scroll").each(function () {
     $(this).find(".dashboard__table-body").css("overflow", "auto");
   }
 });
+
+  $("button").mouseenter(function() {
+    const bg = $(this).attr('data-hover');
+    console.log(bg);
+    
+    $(this).css( "background", bg );
+});
+
+$("button").mouseleave(function() {
+  console.log('u');
+  
+    const bgg = $(this).attr('data-color');
+    $(this).css( "background", bgg );
+});
+

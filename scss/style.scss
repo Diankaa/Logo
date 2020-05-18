@@ -648,10 +648,6 @@
   padding-bottom: 82px;
 }
 
-.section-bg--divs {
-  display: none;
-}
-
 .didvidents__inner {
   display: flex;
   justify-content: space-between;
@@ -884,7 +880,6 @@
 
 .profit-value__per {
   font-family: "Gotham Pro", sans-serif;
-  margin-left: 3px;
 }
 
 .profit-statistic {
@@ -937,18 +932,14 @@
 
 // STAKING
 
-.staking {
-  display: none;
-}
-
 .main-content__staking {
   position: relative;
   padding-bottom: 85px;
 }
 
 .staking__top-info {
-  position: absolute;
-  top: 25px;
+  position: relative;
+  top: -40px;
   left: 10px;
   font-family: "Gotham Pro", sans-serif;
   font-size: 20px;
@@ -961,6 +952,7 @@
 .staking-block {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   width: 100%;
   padding: 29px 29px 17px;
 }
