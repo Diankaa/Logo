@@ -793,24 +793,27 @@
     overflow: hidden;
   }
 
-  .main__content-btn--red {
-    margin-right: 10px;
-  }
-
   .main__content-btn {
     font-size: 11px;
-    padding-left: 40px;
+    padding-right: 13px;
     &::before {
       background-size: 68%;
     }
   }
 
-  .main__content-btn--red::before {
-    top: -4px;
+  .main__content-btn--red {
+    margin-right: 10px;
+    padding-left: 38px;
+    &::before {
+      top: -4px;
+    }
   }
 
-  .main__content-btn--blue::before {
-    top: -6px;
+  .main__content-btn--blue {
+    padding-left: 44px;
+    &::before {
+      top: -6px;
+    }
   }
 
   .didvidents__block {
