@@ -1078,10 +1078,6 @@
 
 // TOKEN
 
-.token {
-  display: none;
-}
-
 .main-content__token {
   padding-bottom: 97px;
 }
@@ -1209,6 +1205,7 @@
 
 .token-price__categories {
   display: flex;
+  justify-content: space-between;
 }
 
 .category {
@@ -1271,6 +1268,7 @@
 }
 
 .detail-list {
+  display: inline-block;
   padding-top: 18px;
   border-top: 1px solid #5184c2;
   margin-right: 30px;
@@ -1581,12 +1579,14 @@
 
 .paid__graphic-buttons {
   display: flex;
+  width: 50%;
   // display: grid;
   // grid-template-columns: 1fr 1fr 1fr 1fr;
   // grid-gap: 9px;
 }
 
 .paid-paid__graphic-btn {
+  flex-grow: 1;
   font-size: 12px;
   text-transform: uppercase;
   padding: 11px;

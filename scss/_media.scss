@@ -111,6 +111,28 @@
     font-size: 25px;
   }
 
+  .token__head {
+    flex-direction: column;
+  }
+
+  .token-block {
+    flex-wrap: wrap;
+    padding-left: 260px;
+    &::before {
+      left: 10px;
+      top: 55px;
+    }
+  }
+
+  .token-price,
+  .token-detail {
+    width: 100%;
+  }
+
+  .token-price {
+    margin-bottom: 30px;
+  }
+
   .history,
   .paid {
     width: 100%;
@@ -229,6 +251,15 @@
   .block-right__title {
     font-size: 25px;
   }
+
+  .token-block {
+    padding-left: 215px;
+  }
+
+  .token-block::before {
+    top: 77px;
+    background-size: 90%;
+  }
 }
 
 @media (max-width: 767px) {
@@ -273,6 +304,7 @@
       bottom: 30px;
       & .select-dropdown {
         top: auto;
+        right: auto;
         bottom: calc(100% + 10px);
         padding-bottom: 5px;
         & .select-list::after {
@@ -320,6 +352,7 @@
 
   .main__content {
     padding-top: 35px;
+    padding-bottom: 120px;
     max-width: 375px;
   }
 
@@ -351,6 +384,10 @@
     top: -13px;
   }
 
+  .section-bg {
+    margin-bottom: 10px;
+  }
+
   .section-bg--dividents {
     display: none;
   }
@@ -367,6 +404,10 @@
   .btc {
     background: url("../img/btc-bg-small.png") no-repeat right;
     margin-bottom: 35px;
+  }
+
+  .main-content__didvidents {
+    padding-bottom: 47px;
   }
 
   .didvidents__block {
@@ -489,8 +530,114 @@
     min-width: 440px;
   }
 
+  .main-content__token {
+    padding-bottom: 55px;
+  }
+
+  .token__head .section-bg {
+    width: 82%;
+  }
+
+  .token__head .price-changes {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 50px;
+  }
+
+  .price-changes__top {
+    justify-content: flex-start;
+  }
+
+  .price-changes__name {
+    font-size: 12px;
+    margin-right: 10px;
+  }
+
+  .price-changes__line {
+    max-width: 100%;
+  }
+
+  .token-block {
+    padding-left: 20px;
+    padding-top: 151px;
+    padding-bottom: 15px;
+    &::before {
+      top: -145px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: url("../img/token-img-small.png") no-repeat;
+      width: 371px;
+      height: 363px;
+    }
+  }
+
+  .token-price {
+    margin-bottom: 24px;
+  }
+
+  .token-price__title {
+    margin-bottom: 30px;
+  }
+
+  .token-price__categories {
+    flex-wrap: wrap;
+  }
+
+  .category__title-icon {
+    margin-right: 15px;
+  }
+
+  .category {
+    width: 100%;
+    background-color: rgba(27, 34, 51, 0.4);
+    border-radius: 12px;
+    margin-bottom: 15px;
+    padding: 20px 20px;
+  }
+
+  .category:last-child {
+    margin-bottom: 0;
+  }
+
+  .category__title {
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+    margin-left: 8px;
+  }
+
+  .category__crypt-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .token-detail__title {
+    font-size: 22px;
+  }
+
+  .detail-list {
+    width: 100%;
+    padding-top: 27px;
+    margin-right: 0;
+  }
+
+  .detail-list__item {
+    justify-content: space-between;
+    font-size: 12px;
+    margin-bottom: 17px;
+  }
+
+  .detail-list__item:last-child {
+    margin-bottom: 0;
+  }
+
   .history__head {
     flex-wrap: wrap;
+  }
+
+  .main-content__dashboard {
+    padding-bottom: 57px;
   }
 
   .dashboard__history {
@@ -570,8 +717,8 @@
     display: none;
   }
 
-  .paid-paid__graphic-btn {
-    padding: 12px 23px;
+  .paid__graphic-buttons {
+    width: 100%;
   }
 
   .faq .section-bg {
@@ -580,6 +727,12 @@
 
   .faq-row {
     flex-direction: column;
+  }
+
+  .faq-row:not(:last-child) {
+    flex-direction: column;
+    margin-top: 0;
+    margin-bottom: 40px;
   }
 
   .faq-box {
@@ -633,16 +786,31 @@
     height: 21px;
     margin-right: 6px;
   }
-
-  .paid-paid__graphic-btn {
-    padding: 9px 16px;
-  }
 }
 
 @media (max-width: 360px) {
+  .main {
+    overflow: hidden;
+  }
+
   .main__content-btn--red {
-    display: block;
-    margin-bottom: 30px;
+    margin-right: 10px;
+  }
+
+  .main__content-btn {
+    font-size: 11px;
+    padding-left: 40px;
+    &::before {
+      background-size: 68%;
+    }
+  }
+
+  .main__content-btn--red::before {
+    top: -4px;
+  }
+
+  .main__content-btn--blue::before {
+    top: -6px;
   }
 
   .didvidents__block {

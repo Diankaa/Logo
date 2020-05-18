@@ -12,6 +12,9 @@ body {
   font-size: 15px;
   color: #fff;
   background-color: #0d131c;
+  &.disabled {
+    overflow: hidden;
+  }
 }
 
 .container {

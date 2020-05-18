@@ -271,6 +271,7 @@ $(".dashboard__table-body tr").each(function () {
 
 $("#menu-toggle").click(function () {
   $(".header__topmenu").toggleClass("mobile");
+  $("body").toggleClass("disabled");
 });
 
 if ($(window).width() < 996) {
