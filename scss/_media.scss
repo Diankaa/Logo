@@ -553,9 +553,10 @@
   }
 
   .tokens-box::before {
-    background-size: 65%;
     top: 7px;
-    left: 34px;
+    left: 10px;
+    width: 90px;
+    height: 110px;
   }
 
   .tokens-box__title {
@@ -854,6 +855,10 @@
   .profit-box .select {
     margin-top: 0;
   }
+
+  .profit-box__title {
+    font-size: 18px;
+  }
 }
 
 @media (max-width: 360px) {
@@ -927,6 +932,10 @@
 
   .profit-box .select-button {
     padding: 11px 40px 11px 16px;
+  }
+
+  .tokens-box__sum {
+    font-size: 23px;
   }
 
   .history-btn:first-child {

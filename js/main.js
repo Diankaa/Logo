@@ -90,6 +90,7 @@ $(function () {
 
     const profitAprValue = $(".apr-value");
     const profitRoiValue = $(".roi-value");
+console.log(curAprValue);
 
     switch (curAprValue) {
       case "(trx)":
@@ -102,7 +103,7 @@ $(function () {
         break;
       default:
         profitAprValue.each(function () {
-          $(this).html("650 <span class='profit-value__per'> % </span>");
+          $(this).html("660 <span class='profit-value__per'> % </span>");
         });
         profitRoiValue.each(function () {
           $(this).html("230 <span class='profit-value__per'> Days </span>");
@@ -168,6 +169,8 @@ $(function () {
     changeSelect($(this));
 
     if ($(this).is("[data-profit]")) {
+      console.log('h');
+      
       changeProfitValue($(this));
     }
 
