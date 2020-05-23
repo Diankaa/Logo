@@ -55,12 +55,12 @@ $(function () {
       item.find(".select-text").attr("data-date") ||
       item.find("option").attr("data-crypt-date");
 
-    const profitBtt = $("[data-" + cryptName + "-btt]").find(".crypt-num__sum");
+    const profitBtt = $("[data-" + cryptName + "-btt]").find(".crypt__num");
     const profitUsdt = $("[data-" + cryptName + "-usdt]").find(
-      ".crypt-num__sum"
+      ".crypt__num"
     );
-    const profitTrx = $("[data-" + cryptName + "-ytx]").find(".crypt-num__sum");
-    const profitBtc = $("[data-" + cryptName + "-btc]").find(".crypt-num__sum");
+    const profitTrx = $("[data-" + cryptName + "-trx]").find(".crypt__num");
+    const profitBtc = $("[data-" + cryptName + "-btc]").find(".crypt__num");
 
     const dataDate = profitValues[cryptDate];
 
@@ -71,7 +71,7 @@ $(function () {
 
       dataDate[crypt] =
         valueNum +
-        "<span class='crypt-num__sum--gray'>" +
+        "<span class='text-gray'>" +
         "0".repeat(xLength) +
         "</span>";
       return value;
@@ -85,7 +85,7 @@ $(function () {
 
   function changeProfitValue(targetItem) {
     const curAprValue =
-      targetItem.find("img").attr("data-profit-cur") ||
+      targetItem.find("img").attr("data-profit-crypt") ||
       targetItem.find("option").attr("data-profit-crypt");
 
     const profitAprValue = $(".apr-value");

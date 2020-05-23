@@ -13,7 +13,7 @@
 @media (max-width: 1300px) {
   .aside-menu,
   .header__all-games,
-  .header__topmenu  {
+  .header__topmenu {
     display: none;
   }
 
@@ -361,19 +361,21 @@
     &::before {
       left: -6px;
       top: -12px;
-      background-size: 75%;
+      height: 52px;
     }
   }
 
   .main__content-btn--red {
     margin-right: 23px;
     &::before {
+      width: 48px;
       left: -9px;
       top: -8px;
     }
   }
 
   .main__content-btn--blue::before {
+    width: 56px;
     left: -8px;
     top: -13px;
   }
@@ -502,7 +504,6 @@
   .paid__head-title {
     font-size: 22px;
   }
-
 
   .profit__head-img {
     margin-right: 7px;
@@ -863,9 +864,6 @@
   .main__content-btn {
     font-size: 11px;
     padding-right: 13px;
-    &::before {
-      background-size: 68%;
-    }
   }
 
   .main__content-btn--red {
