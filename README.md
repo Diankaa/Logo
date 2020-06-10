@@ -1,3 +1,3 @@
-# logo
-Technologies: HTML5, SCSS, jQuery, Gulp                                       
-https://diankaa.github.io/logo/
+Technologies:  SCSS, БЭМ, FLEX, HTML5, CSS3, SVG, Responsive, jQuery
+
+Link: https://diankaa.github.io/logo/
