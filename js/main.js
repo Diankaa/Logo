@@ -90,7 +90,6 @@ $(function () {
 
     const profitAprValue = $(".apr-value");
     const profitRoiValue = $(".roi-value");
-console.log(curAprValue);
 
     switch (curAprValue) {
       case "(trx)":
